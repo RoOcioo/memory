@@ -1,0 +1,19 @@
+.Card {
+    border-style: solid;
+    border: #440000;
+    background-color: #6b1919;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 5px;
+    float: left;
+    transition: transform 0.8s;
+    font-size: 40px;
+    padding-top: 40px;
+  }
+  
+  .Card.reveal {
+    border: #440000;
+    background-color: #860202;
+    transform: rotateY(-180deg);
+  }
