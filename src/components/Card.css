@@ -1,7 +1,7 @@
 .Card {
   border-style: solid;
-  border: #440000;
-  background-color: #6b1919;
+  border:indianred;
+  background-color: blueviolet;
   height: 100px;
   width: 100px;
   border-radius: 5px;
@@ -10,10 +10,20 @@
   transition: transform 0.8s;
   font-size: 40px;
   padding-top: 40px;
+  text-align: center;
+
 }
 
 .Card.reveal {
-  border: #440000;
-  background-color: #860202;
-  transform: rotateY(180deg);
+  border: indianred;
+  background-color: greenyellow;
+  transform: rotateY(360deg);
+  text-align: center;
 }
+
+/* .Card.test {
+  border: indianred;
+  background-color:blue;
+  transform: rotateY(360deg);
+  text-align: center;
+} */
