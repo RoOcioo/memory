@@ -1,8 +1,8 @@
 .Card {
   border-style: solid;
   border:indianred;
-  background-color: blueviolet;
-  height: 100px;
+  background-color: rgb(75, 8, 138);
+  height: 140px;
   width: 100px;
   border-radius: 5px;
   margin: 5px;
@@ -16,11 +16,7 @@
 
 .Card.reveal {
   border: indianred;
-  background-color: greenyellow;
+  background-color: rgb(124, 1, 240);
   transform: rotateY(360deg);
   text-align: center;
-}
-
-.Card.hide{
- display: none;
 }
