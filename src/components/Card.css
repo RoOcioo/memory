@@ -21,9 +21,6 @@
   text-align: center;
 }
 
-/* .Card.test {
-  border: indianred;
-  background-color:blue;
-  transform: rotateY(360deg);
-  text-align: center;
-} */
+.Card.hide{
+ display: none;
+}
