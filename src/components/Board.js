@@ -8,7 +8,11 @@ class Board extends React.Component {
       'A',
       'B',
       'C',
-      'D'
+      'D',
+      'E',
+      'F',
+      'G',
+      'H'
     ]
     const deck = fronts
       .concat(fronts) // sert à concatener les 2 tableaux obtenus
