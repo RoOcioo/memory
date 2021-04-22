@@ -1,114 +1,38 @@
-.bienvenue {
-  
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-
-h1 {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  font-size: 5rem;
-  margin-top: 0;
+.App-link {
+  color: #61dafb;
 }
 
-
-header {
-  padding: 0.5rem 2rem;
-  background: white;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-h4 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  line-height: 1;
-  margin: 0;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.num {
-  font-family: var(--font-display);
-  color: var(--hotpink);
-  font-weight: 400;
-  font-size: 3.5rem;
-  line-height: 0.9;
-}
-
-.conteurs {
-  display: flex;
-  margin-right: 2rem;
-}
-
-
-/* version Rocio */
-/* 
-.bienvenue {
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-}
-
-
-h1 {
-  font-family: var(--font-display);
-  text-transform: uppercase;
-  font-size: 5rem;
-  margin-top: 0;
-}
-
-
-header {
-  padding: 0.5rem 2rem;
-  background: white;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-h4 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  line-height: 1;
-  margin: 0;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.num {
-  font-family: var(--font-display);
-  color: var(--hotpink);
-  font-weight: 400;
-  font-size: 3.5rem;
-  line-height: 0.9;
-}
-
-.conteurs {
-  display: flex;
-  margin-right: 2rem;
-} */
