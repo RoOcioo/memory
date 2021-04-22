@@ -1,17 +1,18 @@
 .Card {
   border-style: solid;
-  border:indianred;
+  border: indianred;
   background-color: rgb(75, 8, 138);
   height: 140px;
   width: 100px;
   border-radius: 5px;
-  margin: 5px;
+  margin-left: 50px;
+  margin-top: 20px;
   float: left;
-  transition: transform 0.8s;
+  transition: 0.3s;
   font-size: 40px;
   padding-top: 40px;
   text-align: center;
-
+  backface-visibility: hidden;
 }
 
 .Card.reveal {
