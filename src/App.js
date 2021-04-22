@@ -7,20 +7,44 @@ import "./App.css";
 import "./components/Main.css";
 
 class App extends React.Component {
+
+  constructor() {
+    super()
+
+    this.state = {
+      count: 10
+    }
+
+    this.decrementCount = this.decrementCount.bind(this)
+  }
+
+  
+  decrementCount() {
+    this.setState({
+      count: this.state.count - 1,
+    });
+
+  }
+
+
+
+
   render() {
     return (
       <div className="main container-fluid">
         <div>
-        <h1>Memory Game</h1>
-          < Board />
+          <h1>Memory Game</h1>
+          {this.state.count === 0 ? (<h2>You lose.</h2>) : < Board count={this.state.count} decrementCount={this.decrementCount} />
+          } 
+          {/* si le count = 0 on affiche "you lose" sinon on conitnue avec board,qui lui affiche le count et la fonction decrement */}
         </div>
       </div>
-      
-    
+
+
 
     );
-    
-    }
+
+  }
 }
 
 export default App;
@@ -29,7 +53,7 @@ export default App;
 
 // class App extends React.Component {
 //   render() {
-    
+
 //     return (
 //       <div>
 //         Memory Game
