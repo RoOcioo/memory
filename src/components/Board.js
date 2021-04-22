@@ -1,6 +1,5 @@
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import Card from "./Card";
-import App from "../App";
 
 class Board extends React.Component {
   constructor(props) {
