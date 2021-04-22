@@ -5,18 +5,9 @@ import App from "../App";
 class Board extends React.Component {
   constructor(props) {
     super(props)
-    const fronts = [
-      'A',
-      'B',
-      'C',
-      'D',
-      'E',
-      'F',
-      'G',
-      'H'      
-    ]
-    const deck = fronts
-      .concat(fronts) // sert à concatener les 2 tableaux obtenus
+    
+    const deck = this.props.fronts
+      .concat(this.props.fronts) // sert à concatener les 2 tableaux obtenus
       .sort(() => Math.random() - 0.5) // sert à faire un random des valeurs de l'array
       .map(face => { // permet de parcourir le tableau et de mettre les valeurs
         return {
@@ -28,7 +19,7 @@ class Board extends React.Component {
       deck: deck,
       firstCard: null, //initialise après chaque double tirage à Zero
       match: false,
-
+     
     }
     this.cardWeFlip = this.cardWeFlip.bind(this)
     this.flip = this.flip.bind(this)
@@ -93,7 +84,7 @@ class Board extends React.Component {
     let ifDeckComplete = this.state.deck.every(elem => elem.reveal === true )
     return (
       <div>
-        <h2>{this.props.count}</h2>
+        <h2>Tentatives restantes : {this.props.count}</h2>
         { ifDeckComplete ? <h2>You win!</h2> :
           this.state.deck.map((face, index) => {
             return (<div>

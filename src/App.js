@@ -12,13 +12,14 @@ class App extends React.Component {
     super()
 
     this.state = {
-      count: 10
+      count: 0,
+      frontGame: []
     }
 
     this.decrementCount = this.decrementCount.bind(this)
+    this.chooseDifficulty = this.chooseDifficulty.bind(this)
   }
 
-  
   decrementCount() {
     this.setState({
       count: this.state.count - 1,
@@ -26,23 +27,44 @@ class App extends React.Component {
 
   }
 
+   fronts = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L','M','N','O','P','Q','R'];
 
+  chooseDifficulty(numDifficulty) {
 
+    let newArray = this.fronts.splice(0, numDifficulty)
+    this.setState({
+      frontGame: newArray,
+      count: numDifficulty
+    })
+  }
 
   render() {
-    return (
-      <div className="main container-fluid">
+
+    if (this.state.frontGame.length === 0) {
+      return (
         <div>
-          <h1>Memory Game</h1>
-          {this.state.count === 0 ? (<h2>You lose.</h2>) : < Board count={this.state.count} decrementCount={this.decrementCount} />
-          } 
-          {/* si le count = 0 on affiche "you lose" sinon on conitnue avec board,qui lui affiche le count et la fonction decrement */}
+          <h1>Bonjour</h1>
+        <div>
+          <button className="btn btn-primary col-2" onClick={() => this.chooseDifficulty(3)}> Play With 6 cards</button>
+          <button className="btn btn-primary col-2" onClick={() => this.chooseDifficulty(6)}> Play With 12 cards</button>
+          <button className="btn btn-primary col-2" onClick={() => this.chooseDifficulty(12)}> Play With 24 cards</button>
+          <button className="btn btn-primary col-2" onClick={() => this.chooseDifficulty(18)}> Play With 36 cards</button>
+
         </div>
-      </div>
-
-
-
-    );
+        </div>
+      )
+    } else {
+      return (
+        <div className="main container-fluid">
+          <div>
+            <h1>Memory Game</h1>
+            {this.state.count === 0 ? (<h2>You lose.</h2>) : < Board count={this.state.count} decrementCount={this.decrementCount} fronts={this.state.frontGame} />
+            }
+            {/* si le count = 0 on affiche "you lose" sinon on conitnue avec board,qui lui affiche le count et la fonction decrement */}
+          </div>
+        </div>
+      )
+    }
 
   }
 }
