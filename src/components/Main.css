@@ -1,0 +1,41 @@
+.main {
+    background-color: #282c34;
+    min-height:200vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    text-align: center;
+  }
+  
+ 
+
+.buttonMemory{
+  border-style: solid;
+  border:indianred;
+  border-radius: 5px;
+  height: 70px;
+  margin-top: 30px;
+  margin: 30px 5px;
+  text-align: center;
+  color: white;
+}
+
+.difficulty1{
+  background-color: rgb(0, 92, 8);
+}
+.difficulty2{
+  background-color: rgb(0, 1, 77);
+}
+.difficulty3{
+  background-color: rgb(148, 67, 0);
+}
+.difficulty4{
+  background-color: rgb(121, 0, 0);
+}
+
+.rules{
+  text-align: justify;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 160%;
+
+}
